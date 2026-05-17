@@ -1,0 +1,1795 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hlalefo Khalata | Full Stack Software Engineer | AI & Secure Systems Developer</title>
+<meta name="description" content="Hlalefo Khalata is a South African Full Stack Software Engineer specializing in React, Next.js, C# .NET, AI integrations, secure APIs, and scalable enterprise systems. Available for international freelance projects and collaborations.">
+<meta name="keywords" content="Full Stack Developer South Africa, Freelance Software Engineer, React Developer, Next.js Developer, C# .NET Developer, AI Integration Engineer, Secure API Developer, African Software Engineer, Remote Full Stack Developer, DevSecOps Engineer, React Native Developer">
+<meta property="og:title" content="Hlalefo Khalata | Full Stack Software Engineer">
+<meta property="og:description" content="South African Full Stack Software Engineer specializing in AI integrations, secure systems, and scalable architecture.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Hlalefo Khalata | Full Stack Software Engineer">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://hlalefokhalata.dev">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Mono:wght@300;400;500&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Hlalefo Khalata",
+  "jobTitle": "Full Stack Software Engineer",
+  "description": "South African Full Stack Software Engineer specializing in AI integrations, secure systems, and scalable architecture.",
+  "url": "https://hlalefokhalata.dev",
+  "sameAs": ["https://github.com/hlalefokhalata", "https://linkedin.com/in/hlalefokhalata"],
+  "address": {"@type": "PostalAddress", "addressLocality": "Johannesburg", "addressCountry": "ZA"},
+  "knowsAbout": ["React", "Next.js", "TypeScript", "C#", ".NET", "AI Integration", "DevSecOps", "React Native"]
+}
+</script>
+
+<style>
+  :root {
+    --bg: #0d0d0b;
+    --bg2: #141412;
+    --bg3: #1a1a17;
+    --gold: #c9a84c;
+    --gold2: #e8c97a;
+    --green: #2d6a4f;
+    --green2: #40916c;
+    --teal: #1b4332;
+    --text: #f0ede6;
+    --text2: #a09b90;
+    --text3: #6b6560;
+    --border: rgba(201,168,76,0.12);
+    --border2: rgba(201,168,76,0.25);
+    --radius: 4px;
+    --font-display: 'Cormorant Garamond', serif;
+    --font-sans: 'Syne', sans-serif;
+    --font-mono: 'DM Mono', monospace;
+  }
+  html.light {
+    --bg: #f5f0e8;
+    --bg2: #ede7db;
+    --bg3: #e5ddd0;
+    --gold: #8a6921;
+    --gold2: #6b5118;
+    --green: #1b4332;
+    --green2: #2d6a4f;
+    --text: #1c1a16;
+    --text2: #5c5648;
+    --text3: #8a8070;
+    --border: rgba(138,105,33,0.15);
+    --border2: rgba(138,105,33,0.3);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; font-size: 16px; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-sans);
+    transition: background 0.5s ease, color 0.5s ease;
+    overflow-x: hidden;
+    cursor: none;
+  }
+
+  /* Custom Cursor */
+  #cursor {
+    position: fixed;
+    width: 12px; height: 12px;
+    background: var(--gold);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    transition: transform 0.1s ease, width 0.25s ease, height 0.25s ease, opacity 0.25s ease;
+    mix-blend-mode: exclusion;
+  }
+  #cursor-ring {
+    position: fixed;
+    width: 40px; height: 40px;
+    border: 1px solid var(--gold);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9998;
+    transform: translate(-50%, -50%);
+    transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease, opacity 0.3s ease;
+    opacity: 0.5;
+  }
+
+  /* Nav */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 4rem;
+    transition: background 0.4s ease, padding 0.3s ease;
+  }
+  nav.scrolled {
+    background: rgba(13,13,11,0.92);
+    backdrop-filter: blur(12px);
+    padding: 1rem 4rem;
+    border-bottom: 1px solid var(--border);
+  }
+  html.light nav.scrolled { background: rgba(245,240,232,0.92); }
+
+  .nav-logo {
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    color: var(--text);
+    text-decoration: none;
+  }
+  .nav-logo span { color: var(--gold); }
+
+  .nav-links {
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+    align-items: center;
+  }
+  .nav-links a {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text2);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--gold); }
+
+  .nav-actions { display: flex; align-items: center; gap: 1rem; }
+
+  .theme-toggle {
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    border: 1px solid var(--border2);
+    background: transparent;
+    color: var(--text2);
+    cursor: none;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1rem;
+    transition: all 0.3s;
+  }
+  .theme-toggle:hover { border-color: var(--gold); color: var(--gold); }
+
+  /* Hero */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 4rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(var(--border) 1px, transparent 1px),
+      linear-gradient(90deg, var(--border) 1px, transparent 1px);
+    background-size: 80px 80px;
+    opacity: 0.4;
+  }
+
+  .hero-glow {
+    position: absolute;
+    width: 600px; height: 600px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(45,106,79,0.15) 0%, transparent 70%);
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+  }
+
+  .hero-tag {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1.5rem;
+    opacity: 0;
+    animation: fadeUp 0.8s ease 0.2s forwards;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  .hero-tag::before {
+    content: '';
+    display: block;
+    width: 2rem;
+    height: 1px;
+    background: var(--gold);
+  }
+
+  .hero-name {
+    font-family: var(--font-display);
+    font-size: clamp(4rem, 10vw, 9rem);
+    font-weight: 300;
+    line-height: 0.9;
+    letter-spacing: -0.02em;
+    color: var(--text);
+    opacity: 0;
+    animation: fadeUp 0.8s ease 0.4s forwards;
+  }
+  .hero-name em {
+    font-style: italic;
+    color: var(--gold);
+    display: block;
+  }
+
+  .hero-subtitle {
+    margin-top: 2rem;
+    font-family: var(--font-sans);
+    font-size: clamp(0.85rem, 1.5vw, 1.05rem);
+    color: var(--text2);
+    max-width: 500px;
+    line-height: 1.7;
+    opacity: 0;
+    animation: fadeUp 0.8s ease 0.6s forwards;
+  }
+
+  .rotating-title {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--green2);
+    margin-top: 0.75rem;
+    height: 1.4em;
+    overflow: hidden;
+    opacity: 0;
+    animation: fadeUp 0.8s ease 0.8s forwards;
+  }
+  .rotating-title span { display: block; animation: rotateTitles 12s linear infinite; }
+
+  .hero-ctas {
+    display: flex;
+    gap: 1rem;
+    margin-top: 3rem;
+    flex-wrap: wrap;
+    opacity: 0;
+    animation: fadeUp 0.8s ease 1s forwards;
+  }
+
+  .btn-primary {
+    padding: 0.8rem 2rem;
+    background: var(--gold);
+    color: #0d0d0b;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: none;
+    cursor: none;
+    transition: all 0.3s;
+    font-weight: 500;
+  }
+  .btn-primary:hover { background: var(--gold2); transform: translateY(-2px); }
+
+  .btn-ghost {
+    padding: 0.8rem 2rem;
+    background: transparent;
+    color: var(--text);
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 1px solid var(--border2);
+    cursor: none;
+    transition: all 0.3s;
+    font-weight: 400;
+  }
+  .btn-ghost:hover { border-color: var(--gold); color: var(--gold); transform: translateY(-2px); }
+
+  .hero-scroll {
+    position: absolute;
+    bottom: 2.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    opacity: 0;
+    animation: fadeUp 0.8s ease 1.4s forwards;
+  }
+  .hero-scroll span {
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--text3);
+  }
+  .scroll-line {
+    width: 1px;
+    height: 60px;
+    background: linear-gradient(to bottom, var(--gold), transparent);
+    animation: scrollPulse 2s ease-in-out infinite;
+  }
+
+  .hero-counter {
+    position: absolute;
+    right: 4rem;
+    bottom: 2.5rem;
+    display: flex;
+    gap: 2.5rem;
+    opacity: 0;
+    animation: fadeUp 0.8s ease 1.2s forwards;
+  }
+  .hero-stat { text-align: right; }
+  .hero-stat .num {
+    font-family: var(--font-display);
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: var(--text);
+    line-height: 1;
+  }
+  .hero-stat .num em { color: var(--gold); font-style: normal; }
+  .hero-stat .label {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text3);
+    margin-top: 0.25rem;
+  }
+
+  /* Sections */
+  section { padding: 7rem 4rem; }
+
+  .section-tag {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+  }
+  .section-tag::after { content: ''; display: block; width: 3rem; height: 1px; background: var(--gold); }
+
+  .section-title {
+    font-family: var(--font-display);
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-weight: 300;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    color: var(--text);
+    margin-bottom: 1.5rem;
+  }
+  .section-title em { font-style: italic; color: var(--gold); }
+
+  /* About */
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    align-items: start;
+    margin-top: 4rem;
+  }
+
+  .about-portrait {
+    position: relative;
+    aspect-ratio: 3/4;
+    max-height: 520px;
+  }
+  .portrait-frame {
+    width: 100%;
+    height: 100%;
+    background: var(--bg3);
+    border: 1px solid var(--border2);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .portrait-placeholder {
+    font-family: var(--font-display);
+    font-size: 6rem;
+    font-weight: 300;
+    color: var(--border2);
+    letter-spacing: -0.05em;
+  }
+  .portrait-accent {
+    position: absolute;
+    bottom: -1px; right: -1px;
+    width: 60%; height: 40%;
+    border-right: 2px solid var(--gold);
+    border-bottom: 2px solid var(--gold);
+    pointer-events: none;
+  }
+  .portrait-accent2 {
+    position: absolute;
+    top: -1px; left: -1px;
+    width: 35%; height: 25%;
+    border-left: 1px solid var(--green2);
+    border-top: 1px solid var(--green2);
+    pointer-events: none;
+  }
+
+  .about-content { padding-top: 1rem; }
+
+  .about-lead {
+    font-family: var(--font-display);
+    font-size: 1.45rem;
+    font-weight: 300;
+    line-height: 1.55;
+    color: var(--text);
+    margin-bottom: 2rem;
+    font-style: italic;
+  }
+
+  .about-body {
+    font-size: 0.92rem;
+    color: var(--text2);
+    line-height: 1.85;
+    margin-bottom: 1.5rem;
+  }
+
+  .about-langs {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+    flex-wrap: wrap;
+  }
+  .lang-tag {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+  .lang-name {
+    font-family: var(--font-sans);
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--text);
+  }
+  .lang-level {
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text3);
+  }
+
+  /* Skills */
+  .skills-section { background: var(--bg2); }
+
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 4rem;
+  }
+
+  .skill-group {
+    border: 1px solid var(--border);
+    padding: 2rem;
+    position: relative;
+    transition: border-color 0.3s, transform 0.3s;
+    background: var(--bg);
+  }
+  .skill-group:hover { border-color: var(--border2); transform: translateY(-4px); }
+  html.light .skill-group { background: var(--bg2); }
+
+  .skill-group-label {
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1.25rem;
+  }
+
+  .skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .skill-tag {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    padding: 0.35rem 0.75rem;
+    border: 1px solid var(--border);
+    color: var(--text2);
+    transition: all 0.2s;
+    letter-spacing: 0.04em;
+  }
+  .skill-tag:hover { border-color: var(--green2); color: var(--green2); }
+  .skill-tag.featured { border-color: var(--gold); color: var(--gold); }
+
+  /* Experience */
+  .timeline {
+    margin-top: 4rem;
+    position: relative;
+  }
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 1px;
+    background: linear-gradient(to bottom, var(--gold), var(--green2), transparent);
+  }
+
+  .timeline-item {
+    padding-left: 3rem;
+    margin-bottom: 4rem;
+    position: relative;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .timeline-item.visible { opacity: 1; transform: translateY(0); }
+
+  .timeline-dot {
+    position: absolute;
+    left: -4px; top: 0.5rem;
+    width: 9px; height: 9px;
+    border-radius: 50%;
+    background: var(--gold);
+    border: 2px solid var(--bg);
+  }
+
+  .timeline-date {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--green2);
+    margin-bottom: 0.5rem;
+  }
+  .timeline-role {
+    font-family: var(--font-display);
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: var(--text);
+    margin-bottom: 0.25rem;
+  }
+  .timeline-company {
+    font-family: var(--font-sans);
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 1rem;
+  }
+  .timeline-desc {
+    font-size: 0.88rem;
+    color: var(--text2);
+    line-height: 1.8;
+    max-width: 600px;
+  }
+  .timeline-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: 1rem;
+  }
+  .chip {
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+    padding: 0.2rem 0.6rem;
+    background: rgba(45,106,79,0.1);
+    border: 1px solid rgba(64,145,108,0.2);
+    color: var(--green2);
+    letter-spacing: 0.08em;
+    border-radius: 2px;
+  }
+
+  /* Projects */
+  .projects-section { background: var(--bg2); }
+
+  .filter-bar {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+    margin-top: 2.5rem;
+  }
+  .filter-btn {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0.4rem 1rem;
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--text3);
+    cursor: none;
+    transition: all 0.2s;
+  }
+  .filter-btn:hover, .filter-btn.active {
+    border-color: var(--gold);
+    color: var(--gold);
+    background: rgba(201,168,76,0.06);
+  }
+
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .project-card {
+    border: 1px solid var(--border);
+    overflow: hidden;
+    transition: all 0.35s ease;
+    background: var(--bg);
+    display: flex;
+    flex-direction: column;
+    cursor: none;
+  }
+  .project-card:hover { border-color: var(--border2); transform: translateY(-6px); }
+  html.light .project-card { background: var(--bg2); }
+
+  .project-image {
+    height: 200px;
+    background: var(--bg3);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .project-image-icon {
+    font-size: 3rem;
+    opacity: 0.3;
+  }
+  .project-image-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, transparent, rgba(13,13,11,0.6));
+  }
+  .project-badge {
+    position: absolute;
+    top: 1rem; right: 1rem;
+    font-family: var(--font-mono);
+    font-size: 0.58rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 0.25rem 0.6rem;
+    background: var(--gold);
+    color: #0d0d0b;
+    font-weight: 500;
+  }
+
+  .project-body { padding: 1.5rem; flex: 1; display: flex; flex-direction: column; }
+  .project-category {
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--green2);
+    margin-bottom: 0.6rem;
+  }
+  .project-name {
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--text);
+    margin-bottom: 0.75rem;
+    line-height: 1.2;
+  }
+  .project-desc {
+    font-size: 0.83rem;
+    color: var(--text2);
+    line-height: 1.7;
+    flex: 1;
+    margin-bottom: 1.25rem;
+  }
+  .project-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    margin-bottom: 1.25rem;
+  }
+  .stack-tag {
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+    padding: 0.15rem 0.5rem;
+    border: 1px solid var(--border);
+    color: var(--text3);
+    letter-spacing: 0.06em;
+  }
+  .project-links { display: flex; gap: 0.75rem; }
+  .project-link {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gold);
+    text-decoration: none;
+    transition: opacity 0.2s;
+  }
+  .project-link:hover { opacity: 0.7; }
+  .project-link + .project-link { color: var(--text3); }
+
+  /* Services */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    margin-top: 4rem;
+  }
+  .service-card {
+    background: var(--bg);
+    padding: 2.5rem 2rem;
+    transition: background 0.3s;
+    position: relative;
+    overflow: hidden;
+  }
+  .service-card:hover { background: var(--bg2); }
+  html.light .service-card { background: var(--bg2); }
+  html.light .service-card:hover { background: var(--bg3); }
+
+  .service-icon {
+    font-family: var(--font-display);
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: var(--border2);
+    margin-bottom: 1rem;
+    line-height: 1;
+  }
+  .service-name {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 0.75rem;
+    letter-spacing: 0.02em;
+  }
+  .service-desc {
+    font-size: 0.82rem;
+    color: var(--text2);
+    line-height: 1.7;
+  }
+  .service-accent {
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 0; height: 2px;
+    background: var(--gold);
+    transition: width 0.4s ease;
+  }
+  .service-card:hover .service-accent { width: 100%; }
+
+  /* Hackathons */
+  .hackathons-section { background: var(--bg2); }
+
+  .hackathon-intro {
+    max-width: 600px;
+    font-size: 0.92rem;
+    color: var(--text2);
+    line-height: 1.85;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+  }
+
+  .hackathon-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .hackathon-card {
+    border: 1px solid var(--border);
+    padding: 2rem;
+    background: var(--bg);
+    position: relative;
+    transition: all 0.3s;
+  }
+  .hackathon-card:hover { border-color: var(--border2); transform: translateY(-4px); }
+  html.light .hackathon-card { background: var(--bg2); }
+
+  .hackathon-year {
+    font-family: var(--font-display);
+    font-size: 3rem;
+    font-weight: 300;
+    color: var(--border2);
+    line-height: 1;
+    margin-bottom: 0.5rem;
+  }
+  .hackathon-name {
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 0.5rem;
+  }
+  .hackathon-desc {
+    font-size: 0.82rem;
+    color: var(--text2);
+    line-height: 1.7;
+  }
+
+  /* Testimonials */
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 4rem;
+  }
+  .testimonial-card {
+    border: 1px solid var(--border);
+    padding: 2rem;
+    position: relative;
+    background: var(--bg);
+  }
+  html.light .testimonial-card { background: var(--bg2); }
+  .testimonial-card::before {
+    content: '\201C';
+    font-family: var(--font-display);
+    font-size: 5rem;
+    color: var(--gold);
+    opacity: 0.2;
+    position: absolute;
+    top: -0.5rem; left: 1.25rem;
+    line-height: 1;
+  }
+  .testimonial-text {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    font-style: italic;
+    color: var(--text);
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    padding-top: 1rem;
+  }
+  .testimonial-author {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text3);
+  }
+  .testimonial-author strong { color: var(--gold); display: block; margin-bottom: 0.2rem; font-weight: 500; }
+  .testimonial-pending {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--text3);
+    text-align: center;
+    padding: 2rem;
+    border: 1px dashed var(--border);
+    margin-top: 4rem;
+    letter-spacing: 0.1em;
+  }
+
+  /* Contact */
+  .contact-section { background: var(--bg2); }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 6rem;
+    margin-top: 4rem;
+    align-items: start;
+  }
+
+  .contact-info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  .contact-info-icon {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+    color: var(--gold);
+    text-transform: uppercase;
+    padding-top: 0.25rem;
+    min-width: 60px;
+  }
+  .contact-info-value {
+    font-size: 0.88rem;
+    color: var(--text2);
+    line-height: 1.6;
+  }
+  .contact-info-value a { color: var(--text); text-decoration: none; transition: color 0.2s; }
+  .contact-info-value a:hover { color: var(--gold); }
+
+  .availability-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--green2);
+    border: 1px solid rgba(64,145,108,0.3);
+    padding: 0.4rem 0.85rem;
+    margin-bottom: 2.5rem;
+    background: rgba(45,106,79,0.06);
+  }
+  .avail-dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--green2);
+    animation: pulse 2s ease-in-out infinite;
+  }
+
+  .contact-form { display: flex; flex-direction: column; gap: 1.25rem; }
+  .form-group { display: flex; flex-direction: column; gap: 0.4rem; }
+  .form-label {
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--text3);
+  }
+  .form-input, .form-textarea {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    color: var(--text);
+    font-family: var(--font-sans);
+    font-size: 0.88rem;
+    padding: 0.85rem 1rem;
+    outline: none;
+    transition: border-color 0.2s;
+    resize: none;
+  }
+  html.light .form-input, html.light .form-textarea { background: var(--bg3); }
+  .form-input:focus, .form-textarea:focus { border-color: var(--gold); }
+  .form-textarea { min-height: 130px; }
+
+  /* Footer */
+  footer {
+    padding: 3rem 4rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: gap;
+  }
+  .footer-copy {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+    color: var(--text3);
+  }
+  .footer-links {
+    display: flex;
+    gap: 1.5rem;
+  }
+  .footer-link {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text3);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .footer-link:hover { color: var(--gold); }
+
+  /* Animations */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes rotateTitles {
+    0%, 18% { transform: translateY(0); }
+    20%, 38% { transform: translateY(-100%); }
+    40%, 58% { transform: translateY(-200%); }
+    60%, 78% { transform: translateY(-300%); }
+    80%, 98% { transform: translateY(-400%); }
+    100% { transform: translateY(-500%); }
+  }
+  @keyframes scrollPulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(0.8); }
+  }
+
+  /* Reveal on scroll */
+  .reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+
+  /* Mobile */
+  @media (max-width: 768px) {
+    nav { padding: 1.25rem 1.5rem; }
+    nav.scrolled { padding: 0.9rem 1.5rem; }
+    .nav-links { display: none; }
+    .hero { padding: 0 1.5rem; }
+    section { padding: 5rem 1.5rem; }
+    .hero-counter { display: none; }
+    .about-grid { grid-template-columns: 1fr; gap: 3rem; }
+    .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
+    footer { flex-direction: column; gap: 1rem; text-align: center; padding: 2rem 1.5rem; }
+    body { cursor: auto; }
+    #cursor, #cursor-ring { display: none; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Cursor -->
+<div id="cursor"></div>
+<div id="cursor-ring"></div>
+
+<!-- Nav -->
+<nav id="nav">
+  <a href="#" class="nav-logo">HK<span>.</span></a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="nav-actions">
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">☾</button>
+    <a href="#contact" class="btn-primary" style="padding: 0.6rem 1.25rem; font-size: 0.65rem;">Hire Me</a>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero" id="home" aria-label="Hero section">
+  <div class="hero-grid" aria-hidden="true"></div>
+  <div class="hero-glow" aria-hidden="true"></div>
+
+  <div class="hero-tag">Available for freelance worldwide</div>
+
+  <h1 class="hero-name">
+    Hlalefo
+    <em>Khalata</em>
+  </h1>
+
+  <p class="hero-subtitle">
+    Full Stack Software Engineer crafting secure, scalable, and intelligent digital systems — from Johannesburg to the world.
+  </p>
+
+  <div class="rotating-title" aria-label="Building secure systems for modern businesses">
+    <span>
+      Building secure systems for modern businesses<br>
+      Engineering scalable digital experiences<br>
+      Full Stack Engineer for startups &amp; enterprise<br>
+      AI-powered software solutions architect<br>
+      Turning complex problems into elegant products<br>
+      Building secure systems for modern businesses
+    </span>
+  </div>
+
+  <div class="hero-ctas">
+    <a href="#projects" class="btn-primary">View Projects</a>
+    <a href="mailto:hello@hlalefokhalata.dev" class="btn-ghost">Book a Call</a>
+    <a href="#" class="btn-ghost" download>Download CV</a>
+  </div>
+
+  <div class="hero-scroll" aria-hidden="true">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+
+  <div class="hero-counter" aria-label="Statistics">
+    <div class="hero-stat">
+      <div class="num">4<em>+</em></div>
+      <div class="label">Years of Experience</div>
+    </div>
+    <div class="hero-stat">
+      <div class="num">3<em>+</em></div>
+      <div class="label">Industries Served</div>
+    </div>
+    <div class="hero-stat">
+      <div class="num">∞</div>
+      <div class="label">Problems Solved</div>
+    </div>
+  </div>
+</section>
+
+<!-- About -->
+<section id="about" aria-labelledby="about-heading">
+  <div class="section-tag">About</div>
+  <h2 class="section-title reveal" id="about-heading">
+    Engineer.<br><em>Innovator.</em><br>Builder.
+  </h2>
+
+  <div class="about-grid">
+    <div class="about-portrait reveal">
+      <div class="portrait-frame">
+        <div class="portrait-placeholder" aria-hidden="true">HK</div>
+        <div class="portrait-accent" aria-hidden="true"></div>
+        <div class="portrait-accent2" aria-hidden="true"></div>
+      </div>
+    </div>
+
+    <div class="about-content reveal">
+      <p class="about-lead">
+        "Technology is not just about code — it's about the impact you create with it."
+      </p>
+
+      <p class="about-body">
+        I'm Hlalefo Khalata, a Full Stack Software Engineer based in Johannesburg, South Africa. My journey began with a deep curiosity for how systems work — how software can solve real, complex problems for businesses and people alike.
+      </p>
+
+      <p class="about-body">
+        After completing the rigorous Software Engineering Programme at <strong style="color: var(--text)">WeThinkCode_</strong>, I've gone on to build high-performance web and mobile applications, secure enterprise APIs, and AI-integrated production systems across multiple industries.
+      </p>
+
+      <p class="about-body">
+        I combine technical depth with architecture-driven thinking — security-conscious from the ground up, always designing for scale. Whether it's a startup MVP or an enterprise system handling thousands of users, I bring the same level of craft and intentionality.
+      </p>
+
+      <p class="about-body">
+        Community keeps me grounded. And a relentless passion for building things that matter keeps me moving forward.
+      </p>
+
+      <div class="about-langs" role="list" aria-label="Languages spoken">
+        <div class="lang-tag" role="listitem">
+          <span class="lang-name">English</span>
+          <span class="lang-level">Native</span>
+        </div>
+        <div class="lang-tag" role="listitem">
+          <span class="lang-name">Afrikaans</span>
+          <span class="lang-level">Native</span>
+        </div>
+        <div class="lang-tag" role="listitem">
+          <span class="lang-name">German</span>
+          <span class="lang-level">Learning</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Skills -->
+<section id="skills" class="skills-section" aria-labelledby="skills-heading">
+  <div class="section-tag">Expertise</div>
+  <h2 class="section-title reveal" id="skills-heading">The <em>Stack</em></h2>
+
+  <div class="skills-grid">
+    <div class="skill-group reveal" role="group" aria-label="Frontend skills">
+      <div class="skill-group-label">Frontend</div>
+      <div class="skill-tags">
+        <span class="skill-tag featured">React</span>
+        <span class="skill-tag featured">Next.js</span>
+        <span class="skill-tag featured">TypeScript</span>
+        <span class="skill-tag">Tailwind CSS</span>
+        <span class="skill-tag">Responsive Design</span>
+        <span class="skill-tag">UI/UX Engineering</span>
+      </div>
+    </div>
+
+    <div class="skill-group reveal" role="group" aria-label="Backend skills">
+      <div class="skill-group-label">Backend</div>
+      <div class="skill-tags">
+        <span class="skill-tag featured">C# / .NET</span>
+        <span class="skill-tag featured">Node.js</span>
+        <span class="skill-tag">REST APIs</span>
+        <span class="skill-tag">Authentication</span>
+        <span class="skill-tag">API Security</span>
+        <span class="skill-tag">OOP Design</span>
+      </div>
+    </div>
+
+    <div class="skill-group reveal" role="group" aria-label="AI and Automation skills">
+      <div class="skill-group-label">AI & Automation</div>
+      <div class="skill-tags">
+        <span class="skill-tag featured">AI Integrations</span>
+        <span class="skill-tag featured">AI Model Training</span>
+        <span class="skill-tag">Python Automation</span>
+        <span class="skill-tag">Workflow Optimization</span>
+        <span class="skill-tag">AI APIs</span>
+      </div>
+    </div>
+
+    <div class="skill-group reveal" role="group" aria-label="Security skills">
+      <div class="skill-group-label">Security</div>
+      <div class="skill-tags">
+        <span class="skill-tag featured">JWT / OAuth2</span>
+        <span class="skill-tag featured">RBAC</span>
+        <span class="skill-tag">OWASP</span>
+        <span class="skill-tag">Secure Deployment</span>
+        <span class="skill-tag">DevSecOps</span>
+      </div>
+    </div>
+
+    <div class="skill-group reveal" role="group" aria-label="DevOps skills">
+      <div class="skill-group-label">DevOps & Infra</div>
+      <div class="skill-tags">
+        <span class="skill-tag featured">CI/CD Pipelines</span>
+        <span class="skill-tag">Git</span>
+        <span class="skill-tag">Linux</span>
+        <span class="skill-tag">SQL</span>
+      </div>
+    </div>
+
+    <div class="skill-group reveal" role="group" aria-label="Mobile skills">
+      <div class="skill-group-label">Mobile</div>
+      <div class="skill-tags">
+        <span class="skill-tag featured">React Native</span>
+        <span class="skill-tag">Cross-platform</span>
+        <span class="skill-tag">Mobile Architecture</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Experience -->
+<section id="experience" aria-labelledby="experience-heading">
+  <div class="section-tag">Career</div>
+  <h2 class="section-title reveal" id="experience-heading">
+    Where I've<br><em>Built Things</em>
+  </h2>
+
+  <div class="timeline" role="list">
+
+    <div class="timeline-item" role="listitem">
+      <div class="timeline-dot" aria-hidden="true"></div>
+      <div class="timeline-date">Feb 2025 – Present</div>
+      <div class="timeline-role">Junior Software Engineer</div>
+      <div class="timeline-company">ITSA</div>
+      <p class="timeline-desc">
+        Building high-performance web and mobile applications using Next.js, Node.js, React Native, and Tailwind CSS. Designing secure REST APIs and backend systems in C# and Node.js. Implementing JWT/OAuth2 authentication and RBAC systems. Training and integrating AI models into production applications, with a strong focus on DevSecOps and OWASP principles.
+      </p>
+      <div class="timeline-chips">
+        <span class="chip">Next.js</span>
+        <span class="chip">Node.js</span>
+        <span class="chip">React Native</span>
+        <span class="chip">C#</span>
+        <span class="chip">JWT/OAuth2</span>
+        <span class="chip">RBAC</span>
+        <span class="chip">AI Integration</span>
+        <span class="chip">DevSecOps</span>
+      </div>
+    </div>
+
+    <div class="timeline-item" role="listitem">
+      <div class="timeline-dot" aria-hidden="true"></div>
+      <div class="timeline-date">Apr 2024 – Jan 2025</div>
+      <div class="timeline-role">Junior Developer</div>
+      <div class="timeline-company">Capaciti — Salesforce Programme</div>
+      <p class="timeline-desc">
+        Built scalable web and mobile applications using React and React Native. Developed secure REST APIs in Node.js and C#. Implemented authentication systems and secure data handling, while maintaining CI/CD workflows and deployment pipelines.
+      </p>
+      <div class="timeline-chips">
+        <span class="chip">React</span>
+        <span class="chip">React Native</span>
+        <span class="chip">Node.js</span>
+        <span class="chip">C#</span>
+        <span class="chip">CI/CD</span>
+        <span class="chip">Authentication</span>
+      </div>
+    </div>
+
+    <div class="timeline-item" role="listitem">
+      <div class="timeline-dot" aria-hidden="true"></div>
+      <div class="timeline-date">Dec 2023 – Apr 2024</div>
+      <div class="timeline-role">Python Developer</div>
+      <div class="timeline-company">Tshimologong Precinct</div>
+      <p class="timeline-desc">
+        Developed Python automation scripts that significantly improved workflow efficiency. Maintained data integrity and validation pipelines, delivering reliable, clean data across business operations.
+      </p>
+      <div class="timeline-chips">
+        <span class="chip">Python</span>
+        <span class="chip">Automation</span>
+        <span class="chip">Data Pipelines</span>
+      </div>
+    </div>
+
+    <div class="timeline-item" role="listitem">
+      <div class="timeline-dot" aria-hidden="true"></div>
+      <div class="timeline-date">Apr 2022 – Sep 2023</div>
+      <div class="timeline-role">Web Developer</div>
+      <div class="timeline-company">Sankofa Innovation Funds</div>
+      <p class="timeline-desc">
+        Developed responsive web applications using React and Node.js. Implemented secure frontend coding practices and actively identified and remediated security vulnerabilities across the platform.
+      </p>
+      <div class="timeline-chips">
+        <span class="chip">React</span>
+        <span class="chip">Node.js</span>
+        <span class="chip">Security</span>
+        <span class="chip">Responsive Design</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Projects -->
+<section id="projects" class="projects-section" aria-labelledby="projects-heading">
+  <div class="section-tag">Work</div>
+  <h2 class="section-title reveal" id="projects-heading">
+    Featured<br><em>Projects</em>
+  </h2>
+
+  <div class="filter-bar" role="group" aria-label="Project filter">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="enterprise">Enterprise</button>
+    <button class="filter-btn" data-filter="ai">AI Projects</button>
+    <button class="filter-btn" data-filter="saas">SaaS</button>
+    <button class="filter-btn" data-filter="mobile">Mobile</button>
+    <button class="filter-btn" data-filter="automation">Automation</button>
+  </div>
+
+  <div class="projects-grid" id="projectsGrid">
+
+    <article class="project-card" data-category="enterprise ai">
+      <div class="project-image" style="background: linear-gradient(135deg, #0d2b1f 0%, #1b4332 100%);">
+        <span class="project-image-icon" aria-hidden="true">⚡</span>
+        <div class="project-image-overlay" aria-hidden="true"></div>
+        <span class="project-badge">Enterprise</span>
+      </div>
+      <div class="project-body">
+        <div class="project-category">AI · Enterprise Systems</div>
+        <h3 class="project-name">Intelligent Enterprise Portal</h3>
+        <p class="project-desc">A secure, AI-integrated enterprise management system with RBAC, JWT authentication, and intelligent workflow automation for large-scale business operations.</p>
+        <div class="project-stack">
+          <span class="stack-tag">Next.js</span>
+          <span class="stack-tag">C#/.NET</span>
+          <span class="stack-tag">AI APIs</span>
+          <span class="stack-tag">JWT</span>
+          <span class="stack-tag">RBAC</span>
+        </div>
+        <div class="project-links">
+          <a href="#" class="project-link">Case Study →</a>
+          <a href="#" class="project-link">GitHub</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="project-card" data-category="automation">
+      <div class="project-image" style="background: linear-gradient(135deg, #1c1204 0%, #3d2a08 100%);">
+        <span class="project-image-icon" aria-hidden="true">⚙</span>
+        <div class="project-image-overlay" aria-hidden="true"></div>
+        <span class="project-badge">Automation</span>
+      </div>
+      <div class="project-body">
+        <div class="project-category">Python · Automation</div>
+        <h3 class="project-name">Data Pipeline Automator</h3>
+        <p class="project-desc">Python-based automation system that streamlined business workflows, reduced manual processing time, and ensured data integrity across validation pipelines.</p>
+        <div class="project-stack">
+          <span class="stack-tag">Python</span>
+          <span class="stack-tag">Automation</span>
+          <span class="stack-tag">Data Validation</span>
+        </div>
+        <div class="project-links">
+          <a href="#" class="project-link">Case Study →</a>
+          <a href="#" class="project-link">GitHub</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="project-card" data-category="saas mobile">
+      <div class="project-image" style="background: linear-gradient(135deg, #0d1a2b 0%, #1b3454 100%);">
+        <span class="project-image-icon" aria-hidden="true">📱</span>
+        <div class="project-image-overlay" aria-hidden="true"></div>
+        <span class="project-badge">SaaS</span>
+      </div>
+      <div class="project-body">
+        <div class="project-category">SaaS · Mobile</div>
+        <h3 class="project-name">Cross-Platform SaaS App</h3>
+        <p class="project-desc">Full-stack SaaS application with React Native mobile client, secure Node.js API backend, and complete CI/CD deployment pipeline for rapid iteration.</p>
+        <div class="project-stack">
+          <span class="stack-tag">React Native</span>
+          <span class="stack-tag">Node.js</span>
+          <span class="stack-tag">REST API</span>
+          <span class="stack-tag">CI/CD</span>
+        </div>
+        <div class="project-links">
+          <a href="#" class="project-link">Live Demo →</a>
+          <a href="#" class="project-link">GitHub</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="project-card" data-category="ai">
+      <div class="project-image" style="background: linear-gradient(135deg, #1a0d2b 0%, #2d1b54 100%);">
+        <span class="project-image-icon" aria-hidden="true">🤖</span>
+        <div class="project-image-overlay" aria-hidden="true"></div>
+        <span class="project-badge">AI</span>
+      </div>
+      <div class="project-body">
+        <div class="project-category">AI Integration</div>
+        <h3 class="project-name">AI Model Production System</h3>
+        <p class="project-desc">Designed and implemented an AI model training and deployment pipeline integrated directly into a production web application with real-time inference capabilities.</p>
+        <div class="project-stack">
+          <span class="stack-tag">AI APIs</span>
+          <span class="stack-tag">Next.js</span>
+          <span class="stack-tag">Python</span>
+          <span class="stack-tag">Node.js</span>
+        </div>
+        <div class="project-links">
+          <a href="#" class="project-link">Case Study →</a>
+          <a href="#" class="project-link">GitHub</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="project-card" data-category="enterprise">
+      <div class="project-image" style="background: linear-gradient(135deg, #1a1a0d 0%, #2d2d1b 100%);">
+        <span class="project-image-icon" aria-hidden="true">🔐</span>
+        <div class="project-image-overlay" aria-hidden="true"></div>
+        <span class="project-badge">Security</span>
+      </div>
+      <div class="project-body">
+        <div class="project-category">Secure API · Enterprise</div>
+        <h3 class="project-name">Secure Authentication API</h3>
+        <p class="project-desc">Enterprise-grade authentication service with JWT, OAuth2, and multi-layer RBAC. Built OWASP-compliant with comprehensive security testing and audit logging.</p>
+        <div class="project-stack">
+          <span class="stack-tag">C#/.NET</span>
+          <span class="stack-tag">JWT</span>
+          <span class="stack-tag">OAuth2</span>
+          <span class="stack-tag">OWASP</span>
+        </div>
+        <div class="project-links">
+          <a href="#" class="project-link">Case Study →</a>
+          <a href="#" class="project-link">GitHub</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="project-card" data-category="saas">
+      <div class="project-image" style="background: linear-gradient(135deg, #0d1f1a 0%, #1b3d2f 100%);">
+        <span class="project-image-icon" aria-hidden="true">🚀</span>
+        <div class="project-image-overlay" aria-hidden="true"></div>
+        <span class="project-badge">SaaS MVP</span>
+      </div>
+      <div class="project-body">
+        <div class="project-category">SaaS · Full Stack</div>
+        <h3 class="project-name">Startup MVP Platform</h3>
+        <p class="project-desc">End-to-end SaaS MVP built for a startup — from architecture design to production deployment. React frontend, secure API backend, and scalable database design.</p>
+        <div class="project-stack">
+          <span class="stack-tag">React</span>
+          <span class="stack-tag">Node.js</span>
+          <span class="stack-tag">SQL</span>
+          <span class="stack-tag">Tailwind</span>
+        </div>
+        <div class="project-links">
+          <a href="#" class="project-link">Live Demo →</a>
+          <a href="#" class="project-link">GitHub</a>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- Services -->
+<section id="services" aria-labelledby="services-heading">
+  <div class="section-tag">Services</div>
+  <h2 class="section-title reveal" id="services-heading">
+    What I Can<br><em>Build For You</em>
+  </h2>
+
+  <div class="services-grid" role="list">
+
+    <div class="service-card reveal" role="listitem">
+      <div class="service-icon" aria-hidden="true">01</div>
+      <div class="service-name">Full Stack Web Development</div>
+      <p class="service-desc">End-to-end web applications built with React, Next.js, and Node.js — fast, accessible, and production-ready.</p>
+      <div class="service-accent" aria-hidden="true"></div>
+    </div>
+
+    <div class="service-card reveal" role="listitem">
+      <div class="service-icon" aria-hidden="true">02</div>
+      <div class="service-name">AI Integration</div>
+      <p class="service-desc">Integrate AI capabilities into your product — from model training to real-time inference APIs and intelligent automation.</p>
+      <div class="service-accent" aria-hidden="true"></div>
+    </div>
+
+    <div class="service-card reveal" role="listitem">
+      <div class="service-icon" aria-hidden="true">03</div>
+      <div class="service-name">Secure API Development</div>
+      <p class="service-desc">OWASP-compliant REST APIs with JWT/OAuth2, RBAC, and comprehensive security auditing built in from the start.</p>
+      <div class="service-accent" aria-hidden="true"></div>
+    </div>
+
+    <div class="service-card reveal" role="listitem">
+      <div class="service-icon" aria-hidden="true">04</div>
+      <div class="service-name">SaaS MVP Development</div>
+      <p class="service-desc">Go from idea to live product fast. Architecture, development, deployment, and iteration — I handle the full journey.</p>
+      <div class="service-accent" aria-hidden="true"></div>
+    </div>
+
+    <div class="service-card reveal" role="listitem">
+      <div class="service-icon" aria-hidden="true">05</div>
+      <div class="service-name">Mobile App Development</div>
+      <p class="service-desc">Cross-platform mobile apps with React Native — one codebase, two platforms, premium performance.</p>
+      <div class="service-accent" aria-hidden="true"></div>
+    </div>
+
+    <div class="service-card reveal" role="listitem">
+      <div class="service-icon" aria-hidden="true">06</div>
+      <div class="service-name">Enterprise Systems</div>
+      <p class="service-desc">Scalable, secure enterprise software with complex business logic, integrations, and compliance requirements.</p>
+      <div class="service-accent" aria-hidden="true"></div>
+    </div>
+
+    <div class="service-card reveal" role="listitem">
+      <div class="service-icon" aria-hidden="true">07</div>
+      <div class="service-name">UI Engineering</div>
+      <p class="service-desc">Pixel-perfect, accessible, and performant UI implementations — bridging the gap between design and production.</p>
+      <div class="service-accent" aria-hidden="true"></div>
+    </div>
+
+    <div class="service-card reveal" role="listitem">
+      <div class="service-icon" aria-hidden="true">08</div>
+      <div class="service-name">Technical Consulting</div>
+      <p class="service-desc">Architecture reviews, security audits, tech stack decisions, and team coaching for growing engineering teams.</p>
+      <div class="service-accent" aria-hidden="true"></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Hackathons -->
+<section id="hackathons" class="hackathons-section" aria-labelledby="hackathons-heading">
+  <div class="section-tag">Innovation</div>
+  <h2 class="section-title reveal" id="hackathons-heading">
+    Hackathon<br><em>Battlegrounds</em>
+  </h2>
+
+  <p class="hackathon-intro reveal">
+    Hackathons are where I test the edges of what's possible — rapid prototyping, cross-functional collaboration, and building real solutions under real pressure. Each one has sharpened how I think, build, and lead.
+  </p>
+
+  <div class="hackathon-grid">
+    <div class="hackathon-card reveal">
+      <div class="hackathon-year" aria-hidden="true">24</div>
+      <div class="hackathon-name">Innovation Lab Hackathon</div>
+      <p class="hackathon-desc">Fintech sector — built a secure, AI-assisted loan management system in 48 hours with a team of five engineers.</p>
+    </div>
+    <div class="hackathon-card reveal">
+      <div class="hackathon-year" aria-hidden="true">23</div>
+      <div class="hackathon-name">Tshimologong Tech Sprint</div>
+      <p class="hackathon-desc">Healthcare challenge — developed an automated patient data validation pipeline using Python and REST integrations.</p>
+    </div>
+    <div class="hackathon-card reveal">
+      <div class="hackathon-year" aria-hidden="true">22</div>
+      <div class="hackathon-name">WeThinkCode_ Hackathon</div>
+      <p class="hackathon-desc">Built a real-time collaboration platform with React and Node.js — exploring the future of remote teamwork in Africa.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section id="testimonials" aria-labelledby="testimonials-heading">
+  <div class="section-tag">Testimonials</div>
+  <h2 class="section-title reveal" id="testimonials-heading">
+    What Clients<br><em>Say</em>
+  </h2>
+
+  <div class="testimonials-grid">
+    <div class="testimonial-card reveal">
+      <p class="testimonial-text">Hlalefo delivered an exceptionally secure and well-architected API system. His attention to security best practices and clean code gave us complete confidence in shipping to production.</p>
+      <div class="testimonial-author">
+        <strong>Client — Enterprise Project</strong>
+        Technical Lead
+      </div>
+    </div>
+    <div class="testimonial-card reveal">
+      <p class="testimonial-text">What stands out is how Hlalefo thinks about the full system — not just the feature. He asks the right questions and builds solutions that scale. A genuine pleasure to work with.</p>
+      <div class="testimonial-author">
+        <strong>Startup Founder</strong>
+        SaaS Product
+      </div>
+    </div>
+    <div class="testimonial-card reveal">
+      <p class="testimonial-text">From ideation to deployment, Hlalefo was a full partner in our product journey. He brought both technical excellence and creative thinking to every challenge we faced.</p>
+      <div class="testimonial-author">
+        <strong>Product Manager</strong>
+        Agency Client
+      </div>
+    </div>
+  </div>
+
+  <div class="testimonial-pending reveal" aria-label="More testimonials coming soon">
+    More testimonials coming soon · Currently collecting client feedback
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="contact-section" aria-labelledby="contact-heading">
+  <div class="section-tag">Contact</div>
+  <h2 class="section-title reveal" id="contact-heading">
+    Let's Build Something<br><em>Exceptional</em>
+  </h2>
+
+  <div class="contact-grid">
+    <div class="reveal">
+      <div class="availability-badge" role="status" aria-live="polite">
+        <div class="avail-dot" aria-hidden="true"></div>
+        Available for new projects
+      </div>
+
+      <div class="contact-info-item">
+        <div class="contact-info-icon">Email</div>
+        <div class="contact-info-value">
+          <a href="mailto:hello@hlalefokhalata.dev">hello@hlalefokhalata.dev</a>
+        </div>
+      </div>
+
+      <div class="contact-info-item">
+        <div class="contact-info-icon">Location</div>
+        <div class="contact-info-value">
+          Johannesburg, South Africa<br>
+          <span style="font-size: 0.78rem; color: var(--text3);">Available worldwide, remote-first</span>
+        </div>
+      </div>
+
+      <div class="contact-info-item">
+        <div class="contact-info-icon">Timezone</div>
+        <div class="contact-info-value">SAST (UTC+2)</div>
+      </div>
+
+      <div class="contact-info-item">
+        <div class="contact-info-icon">LinkedIn</div>
+        <div class="contact-info-value">
+          <a href="https://linkedin.com/in/hlalefokhalata" target="_blank" rel="noopener noreferrer">linkedin.com/in/hlalefokhalata</a>
+        </div>
+      </div>
+
+      <div class="contact-info-item">
+        <div class="contact-info-icon">GitHub</div>
+        <div class="contact-info-value">
+          <a href="https://github.com/hlalefokhalata" target="_blank" rel="noopener noreferrer">github.com/hlalefokhalata</a>
+        </div>
+      </div>
+    </div>
+
+    <form class="contact-form reveal" aria-label="Contact form" onsubmit="handleSubmit(event)">
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem;">
+        <div class="form-group">
+          <label class="form-label" for="contact-name">Name</label>
+          <input class="form-input" type="text" id="contact-name" name="name" placeholder="Your name" required autocomplete="name">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="contact-email">Email</label>
+          <input class="form-input" type="email" id="contact-email" name="email" placeholder="your@email.com" required autocomplete="email">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="contact-service">Service</label>
+        <select class="form-input" id="contact-service" name="service" style="cursor: none; appearance: none;">
+          <option value="">Select a service...</option>
+          <option>Full Stack Web Development</option>
+          <option>AI Integration</option>
+          <option>Secure API Development</option>
+          <option>SaaS MVP Development</option>
+          <option>Mobile App Development</option>
+          <option>Enterprise System</option>
+          <option>Technical Consulting</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="contact-message">Message</label>
+        <textarea class="form-textarea" id="contact-message" name="message" placeholder="Tell me about your project..." required></textarea>
+      </div>
+      <button type="submit" class="btn-primary" style="cursor: none; border: none; font-family: var(--font-mono); letter-spacing: 0.12em; text-transform: uppercase; font-size: 0.72rem; padding: 0.9rem 2rem; background: var(--gold); color: #0d0d0b; transition: all 0.3s;" onmouseover="this.style.background='#e8c97a'" onmouseout="this.style.background='var(--gold)'">
+        Send Message →
+      </button>
+    </form>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-copy">
+    © 2025 Hlalefo Khalata · Built with craft &amp; intention · Johannesburg, ZA
+  </div>
+  <nav class="footer-links" aria-label="Footer navigation">
+    <a href="https://github.com/hlalefokhalata" class="footer-link" target="_blank" rel="noopener noreferrer">GitHub</a>
+    <a href="https://linkedin.com/in/hlalefokhalata" class="footer-link" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    <a href="mailto:hello@hlalefokhalata.dev" class="footer-link">Email</a>
+  </nav>
+</footer>
+
+<script>
+  // Theme
+  const themeToggle = document.getElementById('themeToggle');
+  const root = document.documentElement;
+  const saved = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+  if (saved === 'light') { root.classList.add('light'); themeToggle.textContent = '☀'; }
+  themeToggle.addEventListener('click', () => {
+    root.classList.toggle('light');
+    const isLight = root.classList.contains('light');
+    themeToggle.textContent = isLight ? '☀' : '☾';
+    localStorage.setItem('theme', isLight ? 'light' : 'dark');
+  });
+
+  // Nav scroll
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 50);
+  }, { passive: true });
+
+  // Custom cursor
+  const cursor = document.getElementById('cursor');
+  const ring = document.getElementById('cursor-ring');
+  let mx = 0, my = 0, rx = 0, ry = 0;
+  document.addEventListener('mousemove', e => {
+    mx = e.clientX; my = e.clientY;
+    cursor.style.left = mx + 'px';
+    cursor.style.top = my + 'px';
+  });
+  function animateRing() {
+    rx += (mx - rx) * 0.12;
+    ry += (my - ry) * 0.12;
+    ring.style.left = rx + 'px';
+    ring.style.top = ry + 'px';
+    requestAnimationFrame(animateRing);
+  }
+  animateRing();
+
+  // Scroll reveal
+  const reveals = document.querySelectorAll('.reveal, .timeline-item');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('visible'); }
+    });
+  }, { threshold: 0.12 });
+  reveals.forEach(el => observer.observe(el));
+
+  // Project filter
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const filter = btn.dataset.filter;
+      document.querySelectorAll('.project-card').forEach(card => {
+        const show = filter === 'all' || card.dataset.category.includes(filter);
+        card.style.display = show ? 'flex' : 'none';
+        card.style.opacity = show ? '1' : '0';
+      });
+    });
+  });
+
+  // Form
+  function handleSubmit(e) {
+    e.preventDefault();
+    const btn = e.target.querySelector('button[type="submit"]');
+    btn.textContent = 'Message Sent ✓';
+    btn.style.background = '#2d6a4f';
+    btn.style.color = '#f0ede6';
+    setTimeout(() => { btn.textContent = 'Send Message →'; btn.style.background = 'var(--gold)'; btn.style.color = '#0d0d0b'; e.target.reset(); }, 3000);
+  }
+
+  // Smooth hover cursor expand
+  document.querySelectorAll('a, button, .project-card, .skill-group, .service-card').forEach(el => {
+    el.addEventListener('mouseenter', () => {
+      cursor.style.width = '20px'; cursor.style.height = '20px';
+      ring.style.width = '60px'; ring.style.height = '60px'; ring.style.opacity = '0.3';
+    });
+    el.addEventListener('mouseleave', () => {
+      cursor.style.width = '12px'; cursor.style.height = '12px';
+      ring.style.width = '40px'; ring.style.height = '40px'; ring.style.opacity = '0.5';
+    });
+  });
+</script>
+
+</body>
+</html>
